@@ -9,7 +9,7 @@ on:
 #           - second branch
 jobs: #list of tasks to carry out in a work flow
     print-greeting: #name of the job
-       runs-on: ubuntu-latest #what operating system that should carry out the job 
+       runs-on: ubuntu:latest #what operating system that should carry out the job 
     # Define steps to execute the pipeline
     steps:
         - name: Checkout the repo # a code that checks out the repository. (-means list)
