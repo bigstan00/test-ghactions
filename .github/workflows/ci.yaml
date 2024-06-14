@@ -12,7 +12,7 @@ jobs: #list of tasks to carry out in a work flow
        runs-on: ubuntu-latest #what operating system that should carry out the job 
     # Define steps to execute the pipeline
     steps:
-          - name: Check out code # a code that checks out the repository. (-means list)
+          - name: Checkout the repo # a code that checks out the repository. (-means list)
             uses: actions/checkout@v2 # this is an action to do the job of checking the respository for a work flow
           - name: Print greeting
             run: echo "Hello World!" #execute
