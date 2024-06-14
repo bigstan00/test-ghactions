@@ -9,13 +9,13 @@
 #           - second branch
 #jobs: #list of tasks to carry out in a work flow
 #    print-greeting: #name of the job
-#       runs-on: ubuntu:latest #what operating system that should carry out the job 
+#       runs-on: ubuntu:latest #what operating system that should carry out the job ubuntu latest
     # Define steps to execute the pipeline
 #    steps:
 #        - name: Checkout the repo # a code that checks out the repository. (-means list)
 #          uses: actions/checkout@v2 # this is an action to do the job of checking the respository for a work flow
 #        - name: Print greeting
-#          run: echo "Hello World!" #execute
+#          run: echo "Hello World!" #execute (#to write multiple lines of codes use the (|) pipe)
 
 # Workflow name
 name: CI
@@ -31,6 +31,9 @@ jobs:
     # Define steps to execute
        steps:
           - name: Check out code # This checkouts the github repository created.
-            uses: actions/checkout@v2
+            uses: actions/checkout@v2 # action reuseable piece of code
           - name: Print greeting
-            run: echo "Hello World!"
+            run: |
+                    echo "Hello World!"  
+                    echo "This is the current branch"
+            
